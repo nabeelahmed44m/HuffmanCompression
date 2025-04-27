@@ -1,86 +1,47 @@
-﻿<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Huffman Coding Project</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 30px;
-            background-color: #f8f9fa;
-            color: #333;
-        }
-        h1, h2, h3 {
-            color: #2c3e50;
-        }
-        ul {
-            margin-bottom: 20px;
-        }
-        p {
-            margin-bottom: 10px;
-        }
-        .section {
-            background: #ffffff;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-    </style>
-</head>
-<body>
+﻿# Huffman Coding Compression Project
 
-    <h1>Huffman Coding Project</h1>
+## 📚 Problem Statement
 
-    <div class="section">
-        <h2>Problem Statement</h2>
+This project focuses on building and applying the Huffman Coding algorithm to achieve lossless data compression. Huffman coding assigns variable-length binary codes to characters, where shorter codes are assigned to more frequent characters, ensuring no ambiguity during decoding (Prefix Codes).
 
-        <h3>Task No. 1:</h3>
-        <p>Read a text file, build a simple tree-based Huffman coding scheme, and show the results.</p>
+---
 
-        <h3>Task No. 2:</h3>
-        <p>Use predefined priority queues to build an optimal Huffman tree. The priority queue will maintain the current set of trees ordered by their frequencies. 
-        Efficiently traverse the optimal Huffman tree to generate the codes to be printed out.</p>
+## 🛠️ Tasks
 
-        <h3>Task No. 3:</h3>
-        <p>Take a sample file and compress it using the Huffman coding technique.</p>
-    </div>
+### Task 1: 
+- Read a text file.
+- Build a simple tree-based Huffman coding scheme.
+- Display the tree structure and generated codes.
 
-    <div class="section">
-        <h2>Presentation</h2>
+### Task 2:
+- Use a predefined priority queue to build an **optimal Huffman tree**.
+- Maintain trees ordered by character frequencies.
+- Efficiently traverse the Huffman tree to generate and print codes.
 
-        <p>Huffman coding is a lossless data compression algorithm. The idea is to assign variable-length codes to input characters, 
-        with lengths based on the frequencies of corresponding characters. The most frequent character gets the smallest code, 
-        while the least frequent gets the longest code.</p>
+### Task 3:
+- Take a sample file and compress it using the generated Huffman coding scheme.
+- Show compression results and evaluate performance.
 
-        <p>The variable-length codes assigned to characters are <strong>Prefix Codes</strong>, 
-        meaning no code assigned to a character is the prefix of any other code. 
-        This ensures there is no ambiguity while decoding the generated bitstream.</p>
+---
 
-        <h3>Understanding Prefix Codes</h3>
-        <p>For example, suppose there are four characters <em>a</em>, <em>b</em>, <em>c</em>, and <em>d</em>, 
-        and their assigned variable-length codes are 00, 01, 0, and 1, respectively. 
-        This assignment causes ambiguity because the code assigned to <em>c</em> is the prefix of codes assigned to <em>a</em> and <em>b</em>. 
-        If the compressed bitstream is <code>0001</code>, the decompressed result could be "cccd", "ccb", "acd", or "ab".</p>
+## 🎯 Objectives
 
-        <p>Hence, Huffman coding uses a systematic way to avoid such confusion, ensuring efficient and lossless compression.</p>
-    </div>
+- Read a file and calculate the frequency of each character.
+- Construct a binary Huffman Tree based on character frequencies.
+- Traverse the tree and assign binary codes to characters.
+- Compress the original file using these codes.
+- Achieve lossless compression while maintaining data integrity.
 
-    <div class="section">
-        <h2>Key Components of Huffman Coding</h2>
-        <ul>
-            <li><strong>Build a Huffman Tree</strong> from input characters and their frequencies.</li>
-            <li><strong>Traverse the Huffman Tree</strong> to assign binary codes to characters.</li>
-        </ul>
-    </div>
+---
 
-    <div class="section">
-        <h2>Objectives</h2>
-        <p>The goal is to read a text file and return its compressed form. 
-        Based on the symbols and their frequencies, the objective is to build a rooted binary tree, 
-        where the symbols are the labels of the leaves.</p>
-    </div>
+## 🔥 Key Concepts
 
-</body>
-</html>
+- **Huffman Tree Construction**: A binary tree where each leaf node represents a character, and paths to leaves represent the binary codes.
+- **Prefix Codes**: Codes assigned so that no code is the prefix of another, avoiding ambiguity.
+- **Priority Queue**: Used to efficiently combine the least frequent nodes during tree construction.
+
+---
+
+## 💡 Example
+
+Suppose you have characters `a`, `b`, `c`, and `d` with frequencies. A non-prefix-safe encoding like:
