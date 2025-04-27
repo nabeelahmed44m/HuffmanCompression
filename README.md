@@ -40,8 +40,3 @@ This project focuses on building and applying the Huffman Coding algorithm to ac
 - **Prefix Codes**: Codes assigned so that no code is the prefix of another, avoiding ambiguity.
 - **Priority Queue**: Used to efficiently combine the least frequent nodes during tree construction.
 
----
-
-## 💡 Example
-
-Suppose you have characters `a`, `b`, `c`, and `d` with frequencies. A non-prefix-safe encoding like:
